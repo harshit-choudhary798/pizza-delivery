@@ -1,0 +1,16 @@
+{
+  "name": "pizza-delivery",
+  "version": "1.0.0",
+  "description": "This is our pizza delivery app",
+  "main": "index.js",
+  "author": "Harshit Choudhary",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
