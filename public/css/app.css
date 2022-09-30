@@ -4,12 +4,18 @@ body {
   color: #232323;
 }
 
+h1 {
+  font-family: "Montserrat";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
 nav li:last-child a {
-  background: #FE5F1E;
+  background: #1d66d3;
 }
 
 nav li:last-child a:hover {
-  background: #b23301;
+  background: #657de0;
 }
 
 nav li a {
@@ -17,7 +23,7 @@ nav li a {
 }
 
 nav li a:hover {
-  color: #FE5F1E;
+  color: #1d66d3;
 }
 
 section.hero {
@@ -29,13 +35,13 @@ section.hero {
 }
 
 .add-to-cart {
-  border: 2px solid #FE5F1E;
-  color: #FE5F1E;
+  border: 2px solid #1d66d3;
+  color: #1d66d3;
   transition: all 0.3s ease-in-out;
 }
 
 .add-to-cart:hover {
-  background: #FE5F1E;
+  background: #1d66d3;
   border-color: #fff;
   color: #fff;
 }
@@ -45,12 +51,12 @@ section.hero {
 }
 
 .btn-primary {
-  background: #FE5F1E;
+  background: #1d66d3;
   transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover {
-  background: #b23301;
+  background: #657de0;
 }
 
 section.cart {
@@ -58,7 +64,7 @@ section.cart {
 }
 
 section.cart .amount {
-  color: #FE5F1E;
+  color: #1d66d3;
 }
 
 section.login {
@@ -67,11 +73,11 @@ section.login {
 }
 
 section.login a {
-  color: #FE5F1E;
+  color: #1d66d3;
 }
 
 section.login a:hover {
-  color: #b23301;
+  color: #657de0;
 }
 
 .noty_theme__mint {
@@ -80,7 +86,7 @@ section.login a:hover {
 }
 
 a.link {
-  color: #FE5F1E;
+  color: #1d66d3;
 }
 
 section.status {
@@ -177,11 +183,11 @@ section.status {
 }
 
 .status-box ul li.current span {
-  color: #FE5F1E;
+  color: #1d66d3;
 }
 
 .status-box ul li.current span:after {
-  background: #FE5F1E;
+  background: #1d66d3;
 }
 
 .status-box ul li small {
@@ -231,5 +237,9 @@ section.status {
 
 .StripeElement--webkit-autofill {
   background-color: #fefde5 !important;
+}
+
+.image-1 {
+  width: 90%;
 }
 
