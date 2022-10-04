@@ -1,6 +1,4 @@
  import axios from 'axios'
- 
-
  let cartCounter = document.querySelector('#cartCounter')
  let addToCart = document.querySelectorAll('.add-to-cart')
 

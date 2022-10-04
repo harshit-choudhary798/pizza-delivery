@@ -9,8 +9,11 @@ const expressLayout = require('express-ejs-layouts')
 const flash = require('express-flash')
 const { json } = require('express')
 const MongoDbStore = require('connect-mongo')(session)
+const passport = require('passport')
 const PORT = process.env.PORT || 3000
 app.use(express.static('public'))
+
+
 app.use(express.json())
 
  
@@ -44,7 +47,15 @@ app.use(session({
   cookie: { maxAge: 1000 * 60 * 60 * 24 } // 24 hour
 }))
 
+// Passport config
+const passportInit = require('./app/config/passport')
+passportInit(passport)
+app.use(passport.initialize())
+app.use(passport.session())
+
+
 app.use(flash())
+app.use(express.urlencoded({ extended: false }))
 
 // Global middleware
 app.use((req, res, next) => {
@@ -52,10 +63,6 @@ app.use((req, res, next) => {
   res.locals.user = req.user
   next()
 })
-
-
-
-
 // set Template engine
 app.use(expressLayout)
 app.set('views', path.join(__dirname, '/resources/views'))
@@ -63,7 +70,6 @@ app.set('view engine', 'ejs')
 
 
 require('./routes/web')(app)
-
 
 
 app.listen(PORT , ()=>{
