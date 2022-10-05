@@ -15,10 +15,12 @@ app.use(express.static('public'))
 
 
 app.use(express.json())
+ const ID=process.env.USER_ID
+ const PASSWORD=process.env.PASS_WORD
 
+ // Database connection
+ const url=`mongodb+srv://${ID}:${PASSWORD}@cluster0.ak0cmne.mongodb.net/?retryWrites=true&w=majority`
  
-// Database connection
-const url='mongodb://localhost/Pizza'
 mongoose.connect(url, { useNewUrlParser: true, useCreateIndex:true, useUnifiedTopology: true, useFindAndModify : true });
 const connections = mongoose.connection;
 mongoose.connection
